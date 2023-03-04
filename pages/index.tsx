@@ -44,19 +44,15 @@ export default function Home() {
 						key={page.nextId ?? 'lastPage'}
 					>
 						{page.posts.map(
-							(
-								post: {
-									id: string;
-									title: string;
-									createdAt: string;
-								},
-								index: number
-							) => (
+							(post: {
+								id: string;
+								title: string;
+								createdAt: string;
+							}) => (
 								<div
 									className='flex flex-col  bg-gray-900 rounded-lg p-5 w-full md:w-1/3'
 									key={post.id}
 								>
-									<p>{index + 1}</p>
 									<p>{post.title}</p>
 									<p>{post.createdAt}</p>
 								</div>
